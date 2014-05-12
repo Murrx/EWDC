@@ -85,7 +85,8 @@
 						<wsdlDirectory>src/main/webapp/wsdl/</wsdlDirectory>
 						<!-- which wsdl file -->
 						<wsdlFiles>
-							<wsdlFile>powerservice.wsdl</wsdlFile>
+							<wsdlFile>calculator.wsdl</wsdlFile>
+							<wsdlFile>globalweather.wsdl</wsdlFile>
 						</wsdlFiles>
 						<!-- Keep generated files -->
 						<keep>true</keep>
