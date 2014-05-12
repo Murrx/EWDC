@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	xmlns:tns="http://schemas.org.prolector/powerservice/request"
-	targetNamespace="http://schemas.org.prolector/powerservice/request"
+	xmlns:tns="http://schemas.org.prolector/ewdc/request"
+	targetNamespace="http://schemas.org.prolector/ewdc/request"
 	elementFormDefault="qualified">
 
-	<!-- Kandidaat root element -->
 	<element name="request">
-		<!-- anoniem type -->
 		<complexType>
 			<sequence>
-				<element name="x" type="positiveInteger"/>
-				<element name="power" type="positiveInteger"/>
+				<element name="location1" type="tns:location"/>
+				<element name="location2" type="tns:location"/>
 			</sequence>
 		</complexType>
 	</element>
+	
+	<complexType name="location">
+		<sequence>
+			<element name="city" type="string"/>
+			<element name="country" type="string"/>
+		</sequence>
+	</complexType>
 
 </schema>
