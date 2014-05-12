@@ -1,6 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>nl.hu.fnt.gsos</groupId>
@@ -13,7 +12,8 @@
 		<module>ws-interface</module>
 		<module>ws-producer</module>
 		<module>ws-consumer</module>
-	</modules>
+    	<module>ewdcInterface</module>
+  </modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -85,9 +85,9 @@
 						<wsdlDirectory>src/main/webapp/wsdl/</wsdlDirectory>
 						<!-- which wsdl file -->
 						<wsdlFiles>
-							<wsdlFile>calculator.wsdl</wsdlFile>
-							<wsdlFile>globalweather.wsdl</wsdlFile>
-							<wsdlFile>ewdc.wsdl</wsdlFile>
+							<!--wsdlFile>calculator.wsdl</wsdlFile-->
+							<!--wsdlFile>globalweather.wsdl</wsdlFile-->
+							<wsdlFile>ewdc.wsdl</wsdlFile>							
 						</wsdlFiles>
 						<!-- Keep generated files -->
 						<keep>true</keep>
