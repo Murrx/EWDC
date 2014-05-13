@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nl.hu.gsos</groupId>
-	<artifactId>ws-interface</artifactId>
+	<artifactId>ws-weather-interface</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>calculator</name>
+	<name>Webservice interface project</name>
 	<parent>
 		<groupId>nl.hu.fnt.gsos</groupId>
 		<artifactId>ws-parent</artifactId>
@@ -55,7 +55,7 @@
 						<wsdlDirectory>src/main/webapp/wsdl/</wsdlDirectory>
 						<!-- which wsdl file -->
 						<wsdlFiles>
-							<wsdlFile>calculator.wsdl</wsdlFile>
+							<wsdlFile>globalweather.wsdl</wsdlFile>
 
 						</wsdlFiles>
 						<!-- Keep generated files -->
@@ -85,7 +85,7 @@
 							<artifactId>ws-interface</artifactId>
 							<version>1.0</version>
 							<packaging>jar</packaging>
-							<file>${basedir}/target/ws-interface.jar</file>
+							<file>${basedir}/target/ws-weather-interface.jar</file>
 						</configuration>
 					</execution>
 				</executions>

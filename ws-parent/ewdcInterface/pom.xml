@@ -5,7 +5,7 @@
 	<artifactId>ewdcInterface</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Webservice interface project</name>
+	<name>EWDCInterface</name>
 	<parent>
 		<groupId>nl.hu.fnt.gsos</groupId>
 		<artifactId>ws-parent</artifactId>
@@ -38,9 +38,33 @@
 		<finalName>ewdcInterface</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.jvnet.jax-ws-commons</groupId>
-				<artifactId>jaxws-maven-plugin</artifactId>
-			</plugin>
+					<groupId>org.jvnet.jax-ws-commons</groupId>
+					<artifactId>jaxws-maven-plugin</artifactId>
+					<version>2.1</version>
+					<executions>
+						<execution>
+							<id>wsimport-from-jdk</id>
+							<goals>
+								<goal>wsimport</goal>
+							</goals>
+							<phase>generate-sources</phase>
+						</execution>
+					</executions>
+					<configuration>
+						<!--wsdls file directory -->
+						<wsdlDirectory>src/main/webapp/wsdl/</wsdlDirectory>
+						<!-- which wsdl file -->
+						<wsdlFiles>
+							<wsdlFile>ewdc.wsdl</wsdlFile>							
+						</wsdlFiles>
+						<!-- Keep generated files -->
+						<keep>true</keep>
+						<!-- Package name -->
+						<packageName>nl.hu.fnt.gsos.ewdcinterface</packageName>
+						<!-- generated source files destination -->
+						<sourceDestDir>target/generated-code/src</sourceDestDir>
+					</configuration>
+				</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

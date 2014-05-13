@@ -9,10 +9,11 @@
 	<name>Simple Parent Project for GSOS purpose</name>
 
 	<modules>
+   	<module>ws-weather-interface</module>
 		<module>ws-interface</module>
-		<module>ws-producer</module>
-		<module>ws-consumer</module>
     	<module>ewdcInterface</module>
+		<module>ws-producer</module>
+ 		<module>ws-consumer</module>
   </modules>
 
 	<dependencyManagement>
@@ -67,36 +68,7 @@
 						<target>1.7</target>
 					</configuration>
 				</plugin>
-				<plugin>
-					<groupId>org.jvnet.jax-ws-commons</groupId>
-					<artifactId>jaxws-maven-plugin</artifactId>
-					<version>2.1</version>
-					<executions>
-						<execution>
-							<id>wsimport-from-jdk</id>
-							<goals>
-								<goal>wsimport</goal>
-							</goals>
-							<phase>generate-sources</phase>
-						</execution>
-					</executions>
-					<configuration>
-						<!--wsdls file directory -->
-						<wsdlDirectory>src/main/webapp/wsdl/</wsdlDirectory>
-						<!-- which wsdl file -->
-						<wsdlFiles>
-							<!--wsdlFile>calculator.wsdl</wsdlFile-->
-							<!--wsdlFile>globalweather.wsdl</wsdlFile-->
-							<wsdlFile>ewdc.wsdl</wsdlFile>							
-						</wsdlFiles>
-						<!-- Keep generated files -->
-						<keep>true</keep>
-						<!-- Package name -->
-						<packageName>nl.hu.fnt.gsos.wsinterface</packageName>
-						<!-- generated source files destination -->
-						<!-- <sourceDestDir>target/generated-code/src</sourceDestDir> -->
-					</configuration>
-				</plugin>
+				
 				<!-- <plugin> -->
 				<!-- <groupId>org.codehaus.mojo</groupId> -->
 				<!-- <artifactId>build-helper-maven-plugin</artifactId> -->

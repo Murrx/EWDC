@@ -60,7 +60,7 @@
 							<artifactId>ewdcInterface</artifactId>
 							<version>1.0</version>
 							<packaging>jar</packaging>
-							<file>${basedir}/target/ws-interface.jar</file>
+							<file>${basedir}/target/ewdcInterface.jar</file>
 						</configuration>
 					</execution>
 				</executions>
